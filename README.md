@@ -2,6 +2,13 @@
 
 Proyecto Webpay for Href Spa
 
+
+Ejemplo basico
+se debe configurar el archivo CGI-BIN/DATOS/TBK_CONFIG.DAT
+para su correcto funcionamiento...
+
+Webpay con transbank, basado en KCC y node.js con express 4.0, sequelize, mysql , CGI y EJS
+
 ### Para que es este repositorio ###
 
 * Resumen Rapido
