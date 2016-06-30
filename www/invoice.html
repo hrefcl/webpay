@@ -1,0 +1,94 @@
+<!doctype html>
+<html class="fixed">
+
+<head>
+    <!-- Basic -->
+    <meta charset="UTF-8">
+    <title>Webpay Packs</title>
+    <meta name="keywords" content="href webpay" />
+    <meta name="description" content="webpay sistem">
+    <meta name="author" content="href.cl">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Web Fonts  -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="css/theme.css" />
+</head>
+
+<body>
+    <section class="body padding">
+        <!-- start: page -->
+        <div class="row">
+            <div class="invoice">
+                <header class="clearfix">
+                    <div class="row">
+                        <div class="col-sm-6 mt-md">
+                            <h2 class="h2 mt-none mb-sm text-dark text-bold"><% pack.title %></h2>
+                            <h4 class="h4 m-none text-dark text-bold"></h4>
+                        </div>
+                        <div class="col-sm-6 text-right mt-md mb-md">
+                            <address class="ib mr-xlg">
+                                Href Spa.
+                                <br/> Las condes
+                                <br/> Telefono: +56 (2) 24082956
+                                <br/> hola@href.cl
+                            </address>
+                            <div class="ib">
+                                <img src="assets/images/logo.png" alt="Href Spa" height="60px" />
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="table-responsive">
+                    <table class="table invoice-items">
+                        <thead>
+                            <tr class="h4 text-dark">
+                                <th id="cell-id" class="text-semibold">Sku</th>
+                                <th id="cell-item" class="text-semibold">Item</th>
+                                <th id="cell-desc" class="text-semibold">Descripcion</th>
+                                <th id="cell-price" class="text-center text-semibold">Precio</th>
+                                <th id="cell-qty" class="text-center text-semibold">Cantida</th>
+                                <th id="cell-qty" class="text-center text-semibold" ng-show="pack.bonus_discount > 0">Des.</th>
+                                <th id="cell-total" class="text-center text-semibold">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><% pack.sku %></td>
+                                <td class="text-semibold text-dark"><% pack.title %></td>
+                                <td><% pack.description %></td>
+                                <td class="text-center">$<% pack.price %></td>
+                                <td class="text-center">1</td>
+                                <td class="text-center" ng-show="pack.bonus_discount > 0"><%pack.bonus_discount%>%</td>
+                                <td class="text-center">$<% pack.price | ApplyDiscount:pack.bonus_discount %></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="invoice-summary">
+                    <div class="row">
+                        <div class="col-sm-4 col-sm-offset-8">
+                            <table class="table h5 text-dark">
+                                <tbody>
+                                    <tr class="b-top-none">
+                                        <td colspan="2">Subtotal</td>
+                                        <td class="text-left">$<% pack.price  %></td>
+                                    </tr>
+                                    <tr class="h4">
+                                        <td colspan="2">Total</td>
+                                        <td class="text-left">$<% pack.price %></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css" />
+    <style>
+    .title {
+        color: black;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 50;
+        left: 10px;
+    }
+    
+    .pago {
+        border-color: black;
+        border-width: 2px;
+        width: 600px;
+        height: 400px;
+        margin-left: 90px;
+        margin-top: 130px;
+        border-style: solid;
+        padding: 5px 5px;
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="pago">
+        <p class="title">Pago con Webpay</p>
+        <form action="/cgi-bin/tbk_bp_pago.cgi" method="POST" id="webpay-form">
+            <input name="TBK_TIPO_TRANSACCION" value="<%  pack.tipoTransaccion %>" type="hidden" />
+            <input name="TBK_MONTO" value="<%  pack.price  %>" type="hidden" />
+            <input name="TBK_ORDEN_COMPRA" value="<% pack.generatedOC %>" type="hidden" />
+            <input name="TBK_ID_SESION" value="<% pack.generatedOC %>" type="hidden" />
+            <input name="ORIGIN" value="<% pack.ORIGIN %>" type="hidden" />
+            <input name="TBK_URL_EXITO" value="http://partners.haawi.cl/webpay/success" type="hidden" />
+            <input name="TBK_URL_FRACASO" value="http://partners.haawi.cl/webpay/error" type="hidden" />
+        </form>
+    </div>
+</body>
+<script src="/js/jquery.js"></script>
+<script>
+$(function() {
+    setTimeout(function() {
+        $('#webpay-form').submit();
+    }, 500);
+});
+</script>
+
+</html>

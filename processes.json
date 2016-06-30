@@ -1,0 +1,11 @@
+[{
+    "name": "WebPay Node",
+    "cwd": "/root/href/WebPay",
+    "script": "app.js",
+    "env": {
+        "PORT": 3000,
+        "NODE_ENV": "production",
+        "TZ": "America/Santiago"
+    },
+    "TZ": "America/Santiago"
+}]

@@ -1,0 +1,38 @@
+{
+    "name": "Webpay",
+    "version": "1.0.0",
+    "description": "Sistema de pagos de webpay ejemplo",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hrefcl/webpay"
+    },
+    "author": "Francisco Arenas <francisko.arenas@href.cl>",
+    "license": "UNLICENSED",
+    "dependencies": {
+        "body-parser": "^1.15.0",
+        "cgi": "^0.3.1",
+        "cookie-parser": "^1.4.1",
+        "cors": "^2.7.1",
+        "crypto": "0.0.3",
+        "ejs": "^2.4.1",
+        "express": "^4.13.4",
+        "express-session": "^1.13.0",
+        "method-override": "^2.3.5",
+        "mysql": "^2.10.2",
+        "node-static": "^0.7.7",
+        "sequelize": "^3.20.0",
+        "vhost": "^3.0.2"
+    },
+    "bugs": {
+        "url": "https://bitbucket.org/hrefspa/api/issues"
+    },
+    "homepage": "webpay.href.cl",
+    "keywords": [
+        "href",
+        "webpay"
+    ]
+}

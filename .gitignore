@@ -1,0 +1,11 @@
+*/.htaccess
+*/.DS_Store
+.DS_Store
+*/build/*
+node_modules/*
+*/node_modules/*
+node_modules/
+platforms/
+plugins/
+webpay/mac/*
+/cgi-bin/log/*
