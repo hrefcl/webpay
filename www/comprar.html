@@ -26,14 +26,14 @@
 
 <body>
     <div class="pago">
-        <%  pack %>
+        <%=  pack %>
         <p class="title">Pago con Webpay</p>
         <form action="/cgi-bin/tbk_bp_pago.cgi" method="GET" id="webpay-form">
-            <input name="TBK_TIPO_TRANSACCION" value="<%  pack.tipoTransaccion %>" type="hidden" />
-            <input name="TBK_MONTO" value="<%  pack.price  %>" type="hidden" />
-            <input name="TBK_ORDEN_COMPRA" value="<% pack.generatedOC %>" type="hidden" />
-            <input name="TBK_ID_SESION" value="<% pack.generatedOC %>" type="hidden" />
-            <input name="ORIGIN" value="<% pack.ORIGIN %>" type="hidden" />
+            <input name="TBK_TIPO_TRANSACCION" value="<%=  pack.tipoTransaccion %>" type="hidden" />
+            <input name="TBK_MONTO" value="<%=  pack.price  %>" type="hidden" />
+            <input name="TBK_ORDEN_COMPRA" value="<%= pack.generatedOC %>" type="hidden" />
+            <input name="TBK_ID_SESION" value="<%= pack.generatedOC %>" type="hidden" />
+            <input name="ORIGIN" value="<%= pack.ORIGIN %>" type="hidden" />
             <input name="TBK_URL_EXITO" value="http://urlderetorno/webpay/success" type="hidden" />
             <input name="TBK_URL_FRACASO" value="http://urlderetorno/webpay/error" type="hidden" />
         </form>
