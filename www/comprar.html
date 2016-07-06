@@ -27,7 +27,7 @@
 <body>
     <div class="pago">
         <p class="title">Pago con Webpay</p>
-        <form action="/cgi-bin/tbk_bp_pago.cgi" method="POST" id="webpay-form">
+        <form action="/cgi-bin/tbk_bp_pago.cgi" method="GET" id="webpay-form">
             <input name="TBK_TIPO_TRANSACCION" value="<%  pack.tipoTransaccion %>" type="hidden" />
             <input name="TBK_MONTO" value="<%  pack.price  %>" type="hidden" />
             <input name="TBK_ORDEN_COMPRA" value="<% pack.generatedOC %>" type="hidden" />
