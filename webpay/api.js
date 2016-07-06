@@ -20,8 +20,9 @@ module.exports = function(app) {
             pack.tipoTransaccion = "TR_NORMAL";
             pack.ORIGIN = "web";
             pack.generatedOC = "".concat(now.getFullYear(), (now.getMonth() + 1), (now.getDay() + 1), now.getHours(), now.getMinutes(), now.getSeconds());
+            console.log(pack);
             return res.render('comprar', {
-                pack: pack,
+                pack: pack
             })
         }).catch(function(err) {
             console.log(err)
