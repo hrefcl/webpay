@@ -1,8 +1,8 @@
 module.exports = function(app, express) {
 
 
-    app.sequelize = new app.Sequelize('node_webpay', "`node_webpay`@`whm.href.cl`", 'webpay#123456', {
-        host: process.env.MYSQL_URL ? process.env.MYSQL_URL : '127.0.0.1',
+    app.sequelize = new app.Sequelize('webpay', "haawi", 'a1a2a3a4a5A#6', {
+        host: '104.245.37.117',
         port: 3306,
         logging: console.log //false
     })
