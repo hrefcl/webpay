@@ -72,7 +72,7 @@ app.transbankIPS = {
 app.server = http.createServer(app);
 
 if (!process.env.PORT) {
-    process.env.PORT = 6969;
+    process.env.PORT = 80;
 }
 
 app.port = process.env.PORT;

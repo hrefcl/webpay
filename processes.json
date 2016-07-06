@@ -1,6 +1,6 @@
 [{
     "name": "WebPay Node",
-    "cwd": "/root/href/WebPay",
+    "cwd": "/home/nodejs/public_html",
     "script": "app.js",
     "env": {
         "PORT": 3000,
