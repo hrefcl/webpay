@@ -122,6 +122,8 @@ module.exports = function(app, sync) {
 
     //para sincronizar base de datos descomentar esta lineas
 
+
+/*
     
     sequelize.drop({ force: true }).then(function() {
         console.log("Database dropped");
@@ -172,5 +174,6 @@ module.exports = function(app, sync) {
         });
     });
     
+    */
 
 };

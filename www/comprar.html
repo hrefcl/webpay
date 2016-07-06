@@ -26,16 +26,15 @@
 
 <body>
     <div class="pago">
-        <%=  pack %>
         <p class="title">Pago con Webpay</p>
-        <form action="/cgi-bin/tbk_bp_pago.cgi" method="GET" id="webpay-form">
+        <form action="/cgi-bin/tbk_bp_pago.cgi" method="POST" id="webpay-form">
             <input name="TBK_TIPO_TRANSACCION" value="<%=  pack.tipoTransaccion %>" type="hidden" />
             <input name="TBK_MONTO" value="<%=  pack.price  %>" type="hidden" />
             <input name="TBK_ORDEN_COMPRA" value="<%= pack.generatedOC %>" type="hidden" />
             <input name="TBK_ID_SESION" value="<%= pack.generatedOC %>" type="hidden" />
             <input name="ORIGIN" value="<%= pack.ORIGIN %>" type="hidden" />
-            <input name="TBK_URL_EXITO" value="http://urlderetorno/webpay/success" type="hidden" />
-            <input name="TBK_URL_FRACASO" value="http://urlderetorno/webpay/error" type="hidden" />
+            <input name="TBK_URL_EXITO" value="http://webpay.paseolosdominicos.cl:8080/webpay/success" type="hidden" />
+            <input name="TBK_URL_FRACASO" value="http://webpay.paseolosdominicos.cl:8080/webpay/error" type="hidden" />
         </form>
     </div>
 </body>
@@ -43,7 +42,7 @@
 <script>
 $(function() {
     setTimeout(function() {
-        //$('#webpay-form').submit();
+        $('#webpay-form').submit();
     }, 500);
 });
 </script>
