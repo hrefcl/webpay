@@ -3,7 +3,7 @@
     "cwd": "/home/nodejs/public_html",
     "script": "app.js",
     "env": {
-        "PORT": 80,
+        "PORT": 8080,
         "NODE_ENV": "production",
         "TZ": "America/Santiago"
     },
